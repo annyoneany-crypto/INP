@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>INP Token | It's Not Porn - The Concept Crypto</title>
+    <!-- Load Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Load Font Awesome Free CDN -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" xintegrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <!-- Tailwind theme configuration using the Inter font and custom colors -->
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
+        :root {
+            font-family: 'Inter', sans-serif;
+        }
+        /* Light Mode Colors (Default) */
+        .bg-inp-light { background-color: #fce4ec; } /* Very light pink/white */
+        .bg-inp-primary { background-color: #ff69b4; } /* Shocking Pink */
+        .bg-inp-dark { background-color: #c2185b; } /* Dark red/wine */
+        .text-inp-primary { color: #ff69b4; }
+        .text-inp-dark { color: #c2185b; }
+
+        /* Dark Mode Overrides (Applied to body.dark-mode and its children) */
+        body.dark-mode {
+            background-color: #1a081f; /* Deep Dark Purple */
+            color: #fce4ec; /* Light text */
+        }
+
+        body.dark-mode .bg-white,
+        body.dark-mode header,
+        body.dark-mode footer {
+            background-color: #2c0e35 !important; /* Slightly lighter dark background for elements */
+            color: #fce4ec;
+        }
+
+        body.dark-mode .shadow-md {
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.5), 0 2px 4px -2px rgba(0, 0, 0, 0.5) !important;
+        }
+
+        /* Text colors in Dark Mode */
+        body.dark-mode .text-gray-900 {
+            color: #fce4ec; /* Light text for main titles */
+        }
+        body.dark-mode .text-gray-600 {
+            color: #d1d5db; /* Lighter gray for paragraphs */
+        }
+
+        /* Card backgrounds in Dark Mode */
+        body.dark-mode .bg-inp-light {
+            background-color: #3f1a4a; /* Medium dark background for cards */
+        }
+
+        /* Header link colors in Dark Mode */
+        body.dark-mode nav a,
+        body.dark-mode .text-gray-600 {
+             color: #d1d5db !important;
+        }
+
+        body.dark-mode nav a:hover,
+        body.dark-mode .hover\:text-inp-primary:hover {
+            color: #ff69b4 !important; /* Keep primary color for hover */
+        }
+        
+    </style>
+</head>
+<body class="bg-inp-light min-h-screen antialiased">
+
+    <!-- Header & Navigation -->
+    <header class="bg-white/90 backdrop-blur-sm shadow-md sticky top-0 z-10">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4 flex justify-between items-center">
+            <h1 class="text-3xl font-extrabold text-inp-dark tracking-tighter transition duration-300">INP<span class="text-inp-primary">.</span></h1>
+            <nav class="flex items-center space-x-8 text-lg font-medium">
+                <!-- Dark Mode Toggle Button -->
+                <button id="theme-toggle" class="p-2 rounded-full transition duration-300 text-inp-dark dark:text-inp-primary">
+                    <!-- Sun icon for Light Mode (default) -->
+                    <i id="sun-icon" class="fa-solid fa-sun w-6 h-6"></i>
+                    <!-- Moon icon for Dark Mode (initially hidden) -->
+                    <i id="moon-icon" class="fa-solid fa-moon w-6 h-6 hidden"></i>
+                </button>
+                
+                <a href="#about" class="hidden md:block text-gray-600 hover:text-inp-primary transition duration-300">What is INP?</a>
+                <a href="#tokenomics" class="hidden md:block text-gray-600 hover:text-inp-primary transition duration-300">Tokenomics</a>
+                <!-- <a href="#how-to-buy" class="hidden md:block text-gray-600 hover:text-inp-primary transition duration-300">Buy Now Soon</a> -->
+            </nav>
+            <a href="#how-to-buy" class="hidden md:block bg-inp-primary text-white font-bold py-2 px-6 rounded-full shadow-lg hover:bg-inp-dark transition duration-300 transform hover:scale-105">Buy Now Soon!</a>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <main class="pt-12 pb-24">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid md:grid-cols-2 gap-12 items-center">
+            
+            <!-- Hero Text Column -->
+            <div class="text-center md:text-left">
+                <span class="inline-block bg-inp-primary/10 text-inp-dark text-sm font-semibold px-3 py-1 rounded-full mb-3 uppercase dark:bg-inp-primary/30 dark:text-inp-primary">Its Not Porn</span>
+                <h2 class="text-5xl sm:text-7xl font-extrabold leading-tight text-gray-900 mb-4 transition duration-300">
+                    The Most <span class="text-inp-primary">Conceptual</span> Banana in Web3
+                </h2>
+                <p class="text-xl text-gray-600 mb-8 transition duration-300">
+                    Tired of the same old meme coins? $INP is the token that celebrates art, irony, and above all, purity. A serious project, with a... controversial name.
+                </p>
+                <div class="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-4">
+                    <a href="#how-to-buy" class="bg-inp-dark text-white font-extrabold py-3 px-8 rounded-xl shadow-2xl shadow-inp-dark/50 hover:bg-inp-primary transition duration-300 transform hover:scale-105 text-lg uppercase tracking-wider">
+                        Buy $INP Now!
+                    </a>
+                    <a href="https://x.com/INP_Banana" class="bg-inp-dark text-white font-extrabold py-3 px-8 rounded-xl shadow-2xl shadow-inp-dark/50 hover:bg-inp-primary transition duration-300 transform hover:scale-105 text-lg uppercase tracking-wider">
+                        INP on X!
+                    </a>
+                </div>
+            </div>
+
+            <!-- Image Column -->
+            <div class="flex justify-center md:justify-end">
+                <!-- Replace the URL with the Banana.png image in Base64 format or load it externally if allowed. -->
+                <!-- Stylized placeholder referencing the colors and shape of the attached Banana.png. -->
+                <img 
+                    src="./assets/INP.png" 
+                    alt="INP token logo, a stylized peeled banana (as in Banana.png)" 
+                    class="w-80 h-80 sm:w-96 sm:h-96 object-cover rounded-3xl shadow-2xl shadow-inp-primary/50 transition duration-500 hover:rotate-3"
+                    onerror="this.onerror=null;this.src='https://placehold.co/400x400/94A3B8/FFFFFF?text=Logo+Not+Available';"
+                >
+            </div>
+        </div>
+    </main>
+    
+    <!-- "What is INP?" Section -->
+    <section id="about" class="bg-white py-20 transition duration-300">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h3 class="text-4xl font-extrabold text-center text-gray-900 mb-12 transition duration-300">The Concept is Everything.</h3>
+            
+            <div class="grid md:grid-cols-3 gap-8">
+                <!-- Card 1: Community -->
+                <div class="bg-inp-light p-8 rounded-xl shadow-xl transform hover:scale-[1.02] transition duration-300 border-t-4 border-inp-dark">
+                    <i class="fa-solid fa-users w-12 h-12 text-inp-primary mb-4 text-5xl"></i>
+                    <h4 class="text-2xl font-bold text-gray-900 mb-3 transition duration-300">Community & Irony</h4>
+                    <p class="text-gray-600 transition duration-300">INP is driven by a community that understands the importance of not taking themselves too seriously. It is not, and never will be, what you think.</p>
+                </div>
+                <!-- Card 2: Anti-Rug -->
+                <div class="bg-inp-light p-8 rounded-xl shadow-xl transform hover:scale-[1.02] transition duration-300 border-t-4 border-inp-dark">
+                    <i class="fa-solid fa-shield-halved w-12 h-12 text-inp-primary mb-4 text-5xl"></i>
+                    <h4 class="text-2xl font-bold text-gray-900 mb-3 transition duration-300">Security and Transparency</h4>
+                    <p class="text-gray-600 transition duration-300">Liquidity Locked, zero subtle taxes, and no tricks. We work hard to ensure our <b>concept</b> is indestructible.</p>
+                </div>
+                <!-- Card 3: Utility -->
+                <div class="bg-inp-light p-8 rounded-xl shadow-xl transform hover:scale-[1.02] transition duration-300 border-t-4 border-inp-dark">
+                    <i class="fa-solid fa-question w-12 h-12 text-inp-primary mb-4 text-5xl"></i>
+                    <h4 class="text-2xl font-bold text-gray-900 mb-3 transition duration-300">Unknown Utility</h4>
+                    <p class="text-gray-600 transition duration-300">For now? Zero. But art is priceless. Our utility is conceptual, destined to grow with the community and the meme.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Tokenomics Section -->
+    <section id="tokenomics" class="py-20 bg-inp-dark text-white transition duration-300">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h3 class="text-4xl font-extrabold text-center mb-4">Simplified Tokenomics</h3>
+            <p class="text-xl text-center mb-12 text-inp-light">The math is pure. No surprises, promised.</p>
+
+            <div class="grid md:grid-cols-3 gap-8 text-center">
+                <!-- Statistic 1 -->
+                <div class="bg-inp-primary p-6 rounded-xl shadow-2xl">
+                    <div class="text-5xl font-extrabold mb-1">Fun</div>
+                    <div class="text-lg font-medium">All for the comunity</div>
+                </div>
+                <!-- Statistic 2 -->
+                <div class="bg-inp-primary p-6 rounded-xl shadow-2xl">
+                    <div class="text-5xl font-extrabold mb-1">Arena Trade</div>
+                    <div class="text-lg font-medium">Exchange</div>
+                </div>
+                <!-- Statistic 3 -->
+                <div class="bg-inp-primary p-6 rounded-xl shadow-2xl">
+                    <div class="text-5xl font-extrabold mb-1">0%</div>
+                    <div class="text-lg font-medium">Transaction Tax</div>
+                </div>
+            </div>
+
+            <div class="mt-12 text-center">
+                <p class="text-lg font-medium text-inp-light">
+                    Contract Address: <code class="bg-black/20 p-2 rounded-lg break-all">SOON</code>
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- How to Buy Section -->
+    <section id="how-to-buy" class="py-20">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h3 class="text-4xl font-extrabold text-gray-900 mb-10 transition duration-300">3 Steps to Buy INP</h3>
+            
+            <div class="space-y-8">
+                
+                <!-- Step 1 -->
+                <div class="flex items-start bg-inp-light p-6 rounded-xl shadow-lg border-l-8 border-inp-dark transition duration-300">
+                    <div class="flex-shrink-0 text-3xl font-extrabold bg-inp-dark text-white rounded-full w-10 h-10 flex items-center justify-center mr-4">1</div>
+                    <div class="text-left">
+                        <h4 class="text-xl font-bold text-gray-900 mb-1 transition duration-300">Prepare Your Wallet</h4>
+                        <p class="text-gray-600 transition duration-300">Make sure you have a compatible wallet (like MetaMask or Core) and some AVAX.</p>
+                    </div>
+                </div>
+
+                <!-- Step 2 -->
+                <div class="flex items-start bg-inp-light p-6 rounded-xl shadow-lg border-l-8 border-inp-dark transition duration-300">
+                    <div class="flex-shrink-0 text-3xl font-extrabold bg-inp-dark text-white rounded-full w-10 h-10 flex items-center justify-center mr-4">2</div>
+                    <div class="text-left">
+                        <h4 class="text-xl font-bold text-gray-900 mb-1 transition duration-300">Go to the DEX</h4>
+                        <p class="text-gray-600 transition duration-300">Connect to Arena Trade and paste the INP contract address.</p>
+                    </div>
+                </div>
+
+                <!-- Step 3 -->
+                <div class="flex items-start bg-inp-light p-6 rounded-xl shadow-lg border-l-8 border-inp-dark transition duration-300">
+                    <div class="flex-shrink-0 text-3xl font-extrabold bg-inp-dark text-white rounded-full w-10 h-10 flex items-center justify-center mr-4">3</div>
+                    <div class="text-left">
+                        <h4 class="text-xl font-bold text-gray-900 mb-1 transition duration-300">Swap & Hold</h4>
+                        <p class="text-gray-600 transition duration-300">Swap your crypto for INP. Remember to set slippage to 1-2%. Welcome to the community, now don't look at bananas the same way.</p>
+                    </div>
+                </div>
+            </div>
+            
+            <a href="#" class="mt-12 inline-block bg-inp-primary text-white font-extrabold py-4 px-10 rounded-full text-xl shadow-2xl shadow-inp-primary/50 hover:bg-inp-dark transition duration-300 transform hover:scale-105">
+                Buy on Arena Soon
+            </a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white py-8 transition duration-300">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center text-sm">
+            <p class="mb-2">&copy; 2025 INP Token. Its Not Porn. All rights reserved to the Concept.</p>
+            <div class="space-x-4">
+                <!-- <a href="#" class="hover:text-inp-primary transition duration-300">Telegram</a> -->
+                <a href="https://x.com/INP_Banana" class="hover:text-inp-primary transition duration-300">X (Twitter)</a>
+                <!-- <a href="#" class="hover:text-inp-primary transition duration-300">Disclaimer</a> -->
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript per la gestione del Dark Mode -->
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const body = document.body;
+            const toggleButton = document.getElementById('theme-toggle');
+            const sunIcon = document.getElementById('sun-icon');
+            const moonIcon = document.getElementById('moon-icon');
+
+            // 1. Check saved preference or system preference on load
+            const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+            const savedTheme = localStorage.getItem('theme');
+            
+            let isDarkMode = false;
+            if (savedTheme === 'dark') {
+                isDarkMode = true;
+            } else if (savedTheme === null && prefersDark) {
+                isDarkMode = true;
+            }
+
+            // Function to apply the theme
+            const applyTheme = (isDark) => {
+                if (isDark) {
+                    body.classList.add('dark-mode');
+                    sunIcon.classList.add('hidden');
+                    moonIcon.classList.remove('hidden');
+                    localStorage.setItem('theme', 'dark');
+                } else {
+                    body.classList.remove('dark-mode');
+                    moonIcon.classList.add('hidden');
+                    sunIcon.classList.remove('hidden');
+                    localStorage.setItem('theme', 'light');
+                }
+            };
+            
+            // Apply initial theme
+            applyTheme(isDarkMode);
+
+            // 2. Handle toggle click
+            toggleButton.addEventListener('click', () => {
+                const currentIsDark = body.classList.contains('dark-mode');
+                applyTheme(!currentIsDark);
+            });
+        });
+    </script>
+</body>
+</html>
